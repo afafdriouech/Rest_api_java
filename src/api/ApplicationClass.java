@@ -14,6 +14,5 @@ public class ApplicationClass extends ResourceConfig{
 	public ApplicationClass() {
 		packages("api");
 	}
-	
 }
 
