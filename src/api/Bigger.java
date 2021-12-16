@@ -11,7 +11,7 @@ import javax.ws.rs.core.MediaType;
 public class Bigger {
 
 	
-	@GET @Path("/")
+	@GET
 	@Produces(MediaType.TEXT_HTML)
 	public String returnIndex()
 	{
@@ -24,10 +24,9 @@ public class Bigger {
 	}
 	
 	@GET
-    @Path("/bigger")
+    @Path("bigger")
     @Produces("text/plain")
     public String returnResult(@QueryParam("number") int num) {
-		
 		String numbers = String.valueOf(num);
 		char[] digits = numbers.toCharArray();
 		String res=Methods.nextBigger(digits, digits.length);
