@@ -13,7 +13,7 @@ public class Bigger {
 	
 	@GET @Path("/")
 	@Produces(MediaType.TEXT_HTML)
-	public String biggerNext()
+	public String returnIndex()
 	{
 		return "<html>"+"<title>Next bigger number</title>"
 				+"<body><h3>Next bigger number:</h3>"+"<form action=\"http://localhost:9090/myJavaAPI/bigger\" method=\"get\" >"
@@ -26,7 +26,7 @@ public class Bigger {
 	@GET
     @Path("/bigger")
     @Produces("text/plain")
-    public String nextBigger(@QueryParam("number") int num) {
+    public String returnResult(@QueryParam("number") int num) {
 		
 		String numbers = String.valueOf(num);
 		char[] digits = numbers.toCharArray();
